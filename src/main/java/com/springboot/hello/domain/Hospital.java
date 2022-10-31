@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @AllArgsConstructor
@@ -16,7 +17,7 @@ public class Hospital {
     private String openServiceName;
     private int  openLocalGovernmentCode;
     private String managementNumber;
-    private LocalTime licenseDate;
+    private LocalDateTime licenseDate;
     private int businessStatus;
     private int businessStatusCode;
     private String phone;
