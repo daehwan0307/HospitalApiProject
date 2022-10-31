@@ -4,8 +4,6 @@ import com.springboot.hello.domain.dto.MemberDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
-
 @RestController
 @RequestMapping("/api/v1/get-api")
 @Slf4j
@@ -26,6 +24,11 @@ public class GetController {
     public String getVariable1(@PathVariable String variable) {
         log.info("getVariable1으로 요청이 들어왔습니다. variable:{}", variable);
         return variable;
+    }
+    // DTO를 통해 Query Parameter 받기
+    @GetMapping("/request-dto")
+    public String getRequestDto(MemberDto memberDto) {
+        return memberDto.toString();
     }
 
 }
