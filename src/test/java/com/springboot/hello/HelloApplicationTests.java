@@ -32,11 +32,12 @@ class HelloApplicationTests {
 		List<Hospital> hospitalList = hospitalReadLineContext.readByLine(filename);
 		assertTrue(hospitalList.size() > 1000);
 		assertTrue(hospitalList.size() > 10000);
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 10; i++) {
 			System.out.println(hospitalList.get(i).getHospitalName());
 		}
 		System.out.printf("파싱된 데이터 개수:", hospitalList.size());
 	}
+
 
 
 	@Test
