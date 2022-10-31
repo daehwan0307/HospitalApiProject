@@ -15,7 +15,7 @@ import java.time.LocalTime;
 public class Hospital {
     private int id;
     private String openServiceName;
-    private int  openLocalGovernmentCode;
+    private int openLocalGovernmentCode;
     private String managementNumber;
     private LocalDateTime licenseDate;
     private int businessStatus;

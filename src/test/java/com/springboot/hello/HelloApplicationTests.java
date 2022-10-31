@@ -30,9 +30,9 @@ class HelloApplicationTests {
 		// 어디에서든지 실행할 수 있게 짜는 것이 목표.
 		String filename = "C:\\Users\\daehwan\\Desktop\\fulldata_01_01_02_P_의원.csv";
 		List<Hospital> hospitalList = hospitalReadLineContext.readByLine(filename);
-		//assertTrue(hospitalList.size() > 1000);
-		//assertTrue(hospitalList.size() > 10000);
-		for (int i = 1; i < 10; i++) {
+		assertTrue(hospitalList.size() > 1000);
+		assertTrue(hospitalList.size() > 10000);
+		for (int i = 0; i < 10; i++) {
 			System.out.println(hospitalList.get(i).getHospitalName()); //?
 		}
 		System.out.printf("파싱된 데이터 개수:", hospitalList.size());
