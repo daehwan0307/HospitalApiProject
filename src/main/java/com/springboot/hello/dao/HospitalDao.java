@@ -37,6 +37,10 @@ public class HospitalDao {
         );
     }
 
+    public void deleteAll() {
+        this.jdbcTemplate.update("delete from nation_wide_hospitals");
+    }
+
 
 
 }

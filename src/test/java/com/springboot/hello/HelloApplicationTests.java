@@ -28,13 +28,16 @@ class HelloApplicationTests {
 
 	@Test
 	@DisplayName("Hospital이 insert가 잘 되는지")
-	void add(){
+	void add() {
+		hospitalDao.deleteAll();
+		assertEquals(0, hospitalDao.getCount());
 		HospitalParser hp = new HospitalParser();
 		Hospital hospital = hp.parse(line1);
 		hospitalDao.add(hospital);
-
-
+		assertEquals(1, hospitalDao.getCount());
+		// findById
 	}
+
 	@Test
 	@DisplayName("getCount()함수 테스트")
 	void getCount(){
