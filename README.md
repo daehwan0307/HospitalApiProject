@@ -7,5 +7,7 @@
 
 #DataBase 
 
-`nation_wide_hospitals`테이블
+`nation_wide_hospitals`
 ![image](https://user-images.githubusercontent.com/50093472/199159626-d22e9fc0-ca74-4f03-8456-f9135b386326.png)
+테이블 생성 
+![img.png](img.png)
