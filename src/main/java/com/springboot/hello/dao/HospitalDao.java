@@ -13,6 +13,10 @@ public class HospitalDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    public int getCount(){
+        String sql = "select count(id) from nation_wide_hospitals";
+        return this.jdbcTemplate.queryForObject(sql,Integer.class);
+    }
 
     //List<Hospital> --11만건 hospital 정보
     public void add(Hospital hospital) {
@@ -32,6 +36,7 @@ public class HospitalDao {
                 hospital.getTotalAreaSize()
         );
     }
+
 
 
 }
