@@ -35,6 +35,13 @@ class HelloApplicationTests {
 
 
 	}
+	@Test
+	@DisplayName("getCount()함수 테스트")
+	void getCount(){
+		HospitalParser hp = new HospitalParser();
+
+		assertEquals(1,hospitalDao.getCount());
+	}
 
 	@Test
 	@DisplayName("10만건 이상 데이터가 파싱 되는지")
