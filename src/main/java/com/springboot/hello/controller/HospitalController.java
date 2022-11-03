@@ -31,5 +31,10 @@ public class HospitalController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Hospital());
         }
     }
+    @GetMapping("/get/{id}")
+    public String get1(@PathVariable Integer id) {
+        Hospital hospital = hospitalDao.findById(id);
+        return hospital.getFullAddress();
+    }
 
 }
